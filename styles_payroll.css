@@ -1,0 +1,180 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Menu Bar */
+.menu-bar {
+    width: 250px;
+    background: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+}
+
+.menu-bar h2 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.menu-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-bar ul li {
+    margin-bottom: 15px;
+    color: #555;
+    cursor: pointer;
+}
+
+.menu-bar ul li.active {
+    font-weight: bold;
+    color: #6C63FF;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Content Section */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Header */
+.header {
+    background-color: #6C63FF;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table Container */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Top Controls */
+.table-container .top-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.table-container .top-controls .btn-primary {
+    background-color: #6C63FF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.table-container .top-controls .btn-primary:hover {
+    background-color: #5a55d6;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Status Styling */
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: bold;
+}
+
+/* Edit Link */
+.edit-link {
+    text-decoration: none;
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+/* Approve/Reject Buttons */
+.btn-approve, .btn-reject {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.btn-approve {
+    background-color: #28a745;
+}
+
+.btn-reject {
+    background-color: #dc3545;
+}
+
+.btn-approve:hover {
+    background-color: #218838;
+}
+
+.btn-reject:hover {
+    background-color: #c82333;
+}
+
+/* Responsive Table Adjustments */
+@media screen and (max-width: 768px) {
+    table th, table td {
+        font-size: 12px; /* Slightly smaller font for smaller screens */
+        padding: 10px;
+    }
+}

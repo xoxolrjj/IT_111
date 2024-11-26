@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f9; /* Updated to ensure consistent background */
+}
+
+/* Wrapper for Sidebar and Main Content */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #5e2de8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.user-info {
+    margin-top: 10px;
+}
+
+.user-info .profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.user-info p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.user-info .role {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.menu a.active,
+.menu a:hover {
+    background-color: #4316a5;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Matches the sidebar width */
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    background-color: #5e2de8;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content-area {
+    display: flex;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 20px;
+}
+
+.add-department, .department-list {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensures content is readable on smaller screens */
+}
+
+.add-department h2, .department-list h2 {
+    margin-bottom: 15px;
+}
+
+.add-department form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-department input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cancel-btn:hover {
+    background-color: #e53935;
+}
+
+.department-list .search-bar {
+    margin-bottom: 10px;
+}
+
+.department-list .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #5e2de8;
+    color: white;
+}
+
+.edit-btn, .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.edit-btn {
+    color: #ffa500;
+}
+
+.delete-btn {
+    color: #f44336;
+}
+
+.edit-btn:hover {
+    color: #cc8400;
+}
+
+.delete-btn:hover {
+    color: #d32f2f;
+}

@@ -1,0 +1,92 @@
+ /* Add your custom styles or include in styles.css */
+        body {
+            margin: 0;
+            display: flex;
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .header {
+            background-color: #6C63FF;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .table-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container .top-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .table-container .top-controls input {
+            padding: 10px;
+            width: 50%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .table-container .top-controls button {
+            background-color: #6C63FF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .table-container .top-controls button:hover {
+            background-color: #5a55d6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .edit-link {
+            text-decoration: none;
+            color: #6C63FF;
+            font-weight: bold;
+        }
+
+        .edit-link:hover {
+            text-decoration: underline;
+        }
