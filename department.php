@@ -13,7 +13,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
-                <h1>Department</h1>
+                <h1>Departmentssss</h1>
             </div>
             <div class="content-area">
                 <div class="add-department">
