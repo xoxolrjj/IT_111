@@ -21,9 +21,9 @@ class Controller
                 break;
             case 4:
                 include_once('view/payroll.php');  
-            default:
-                include_once('view/department.php');
-                break;
+            // default:
+            //     include_once('view/payroll.php');
+            //     break;
                 }
        
     }
