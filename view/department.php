@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Department Management</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <!-- Include the Sidebar -->
     <div class="wrapper">
-        <?php include('menu.html'); ?> <!-- Sidebar from menu.html -->
-        <!-- Main Content -->
+         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
                 <h1>Departmentssss</h1>

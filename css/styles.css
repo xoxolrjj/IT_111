@@ -87,7 +87,21 @@ body {
     flex-grow: 1;
     margin-left: 250px; /* Matches the sidebar width */
     padding: 20px;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
+
+.content-area {
+    display: flex;
+    flex-direction: column; /* Arranges items vertically */
+    gap: 20px; /* Adds space between sections */
+    width: 100%;
+    max-width: 800px; /* Limits the content width */
+}
+
 
 .header {
     text-align: center;
@@ -98,11 +112,7 @@ body {
     margin-bottom: 20px;
 }
 
-.content-area {
-    display: flex;
-    flex-wrap: wrap; /* Ensures responsiveness */
-    gap: 20px;
-}
+
 
 .add-department, .department-list {
     flex: 1;

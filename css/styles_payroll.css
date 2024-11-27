@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Body Styling */
 body {
     margin: 0;
     display: flex;
@@ -40,11 +40,21 @@ body {
     color: #6C63FF;
 }
 
+.menu-bar ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Content Section */
-.content {
-    margin-left: 250px;
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Matches the sidebar width */
     padding: 20px;
-    width: calc(100% - 250px);
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 
 /* Header */
@@ -69,11 +79,11 @@ body {
 /* Top Controls */
 .table-container .top-controls {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-.table-container .top-controls button {
+.table-container .top-controls .btn-primary {
     background-color: #6C63FF;
     color: white;
     padding: 10px 15px;
@@ -83,7 +93,7 @@ body {
     font-size: 14px;
 }
 
-.table-container .top-controls button:hover {
+.table-container .top-controls .btn-primary:hover {
     background-color: #5a55d6;
 }
 
@@ -91,44 +101,55 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #e0e0e0; /* Matches attendance table styling */
-    background-color: #ffffff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
 }
 
 table th, table td {
-    padding: 15px 20px; /* Consistent padding for all cells */
-    text-align: center; /* Center aligns both header and content */
-    border-bottom: 1px solid #e0e0e0; /* Light border separating rows */
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
 table th {
-    background-color: #6C63FF; /* Attendance-style purple header */
-    color: white;
-    font-size: 14px;
-    text-transform: uppercase; /* Adds a modern uppercase style */
+    background-color: #f4f4f4;
     font-weight: bold;
 }
 
-table td {
-    color: #333; /* Neutral text color */
-    font-size: 14px;
-}
-
-table tr:nth-child(odd) {
-    background-color: #f9f9f9; /* Alternate row styling */
-}
-
 table tr:nth-child(even) {
-    background-color: #ffffff;
+    background-color: #f9f9f9;
 }
 
 table tr:hover {
-    background-color: #f1f1f1; /* Slight hover effect */
-    cursor: pointer; /* Adds interactivity perception */
+    background-color: #f1f1f1;
 }
 
-/* Approve/Reject Buttons in Table */
+/* Status Styling */
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: bold;
+}
+
+/* Edit Link */
+.edit-link {
+    text-decoration: none;
+    color: #6C63FF;
+    font-weight: bold;
+}
+
+.edit-link:hover {
+    text-decoration: underline;
+}
+
+/* Approve/Reject Buttons */
 .btn-approve, .btn-reject {
     padding: 8px 15px;
     border: none;

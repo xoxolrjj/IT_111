@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance</title>
-    <link rel="stylesheet" href="styles_attendance.css">
+    <link rel="stylesheet" href="../css/styles_attendance.css">
     
 </head>
 <body>
     <!-- Include the menu -->
-    <?php include 'menu.html'; ?>
-
+ 
     <!-- Main content -->
-    <div class="content">
+    <div class="main-content">
         <div class="header">
             Attendance
         </div>

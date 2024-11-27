@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leave Management</title>
-    <link rel="stylesheet" href="styles_leave.css">
+    <link rel="stylesheet" href="../css/styles_leave.css">
 </head>
 <body>
     <div class="container">
-        <?php include 'menu.html'; ?>
-        <div class="content">
+         <div class="main-content">
             <header>
                 <h1>Leave</h1>
             </header>

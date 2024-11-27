@@ -1,9 +1,19 @@
-/* General Body Styling */
+/* General Styles */
 body {
     margin: 0;
     display: flex;
     font-family: Arial, sans-serif;
     background-color: #f0f2f5;
+}
+.main-content {
+    flex-grow: 1;
+    margin-left: 250px; /* Matches the sidebar width */
+    padding: 20px;
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Horizontally centers content */
+    align-items: center; /* Vertically centers content */
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    box-sizing: border-box; /* Includes padding in width/height calculations */
 }
 
 /* Menu Bar */
@@ -39,18 +49,8 @@ body {
     font-weight: bold;
     color: #6C63FF;
 }
-
-.menu-bar ul li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Content Section */
-.content {
-    margin-left: 250px;
-    padding: 20px;
-    width: calc(100% - 250px);
-}
+ 
+ 
 
 /* Header */
 .header {
@@ -74,11 +74,11 @@ body {
 /* Top Controls */
 .table-container .top-controls {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.table-container .top-controls .btn-primary {
+.table-container .top-controls button {
     background-color: #6C63FF;
     color: white;
     padding: 10px 15px;
@@ -88,7 +88,7 @@ body {
     font-size: 14px;
 }
 
-.table-container .top-controls .btn-primary:hover {
+.table-container .top-controls button:hover {
     background-color: #5a55d6;
 }
 
@@ -96,55 +96,44 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid #e0e0e0; /* Matches attendance table styling */
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
 }
 
 table th, table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: left;
+    padding: 15px 20px; /* Consistent padding for all cells */
+    text-align: center; /* Center aligns both header and content */
+    border-bottom: 1px solid #e0e0e0; /* Light border separating rows */
 }
 
 table th {
-    background-color: #f4f4f4;
+    background-color: #6C63FF; /* Attendance-style purple header */
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase; /* Adds a modern uppercase style */
     font-weight: bold;
+}
+
+table td {
+    color: #333; /* Neutral text color */
+    font-size: 14px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Alternate row styling */
 }
 
 table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
 }
 
 table tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Slight hover effect */
+    cursor: pointer; /* Adds interactivity perception */
 }
 
-/* Status Styling */
-.status-approved {
-    color: green;
-    font-weight: bold;
-}
-
-.status-pending {
-    color: #ffc107;
-    font-weight: bold;
-}
-
-.status-rejected {
-    color: red;
-    font-weight: bold;
-}
-
-/* Edit Link */
-.edit-link {
-    text-decoration: none;
-    color: #6C63FF;
-    font-weight: bold;
-}
-
-.edit-link:hover {
-    text-decoration: underline;
-}
-
-/* Approve/Reject Buttons */
+/* Approve/Reject Buttons in Table */
 .btn-approve, .btn-reject {
     padding: 8px 15px;
     border: none;

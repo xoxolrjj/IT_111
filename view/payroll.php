@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll</title>
-    <link rel="stylesheet" href="styles_payroll.css">
+    <link rel="stylesheet" href="../css/styles_payroll.css">
 </head>
 <body>
-    <!-- Include the menu bar -->
-    <?php include 'menu.html'; ?>
+   
 
-    <div class="content">
+    <div class="main-content">
         <div class="header">Payroll</div>
         <div class="table-container">
             <div class="top-controls">

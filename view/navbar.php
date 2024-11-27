@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="sidebar">
@@ -17,11 +17,11 @@
             </div>
         </div>
         <ul class="menu">
-            <li><a href="department.php">Department</a></li>
-            <li><a href="employees.php">Employees</a></li>
-            <li><a href="attendance.php">Attendance</a></li>
-            <li><a href="leave.php">Leave</a></li>
-            <li><a href="payroll.php">Payroll</a></li>
+            <li><a href="index.php?command=0">Department</a></li>
+            <li><a href="index.php?command=1">Employees</a></li>
+            <li><a href="index.php?command=2">Attendance</a></li>
+            <li><a href="index.php?command=3">Leave</a></li>
+            <li><a href="index.php?command=4">Payroll</a></li>
         </ul>   
     </div>
 

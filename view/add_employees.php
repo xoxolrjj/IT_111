@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employees</title>
-    <link rel="stylesheet" href="styles_add_employees.css">
+    <link rel="stylesheet" href="../css/styles_add_employees.css">
    
 </head>
 <body>
 
-    <!-- Include the menu -->
-    <?php include 'menu.html'; ?>
-
+ 
     <!-- Main Content -->
     <div class="content">
         <div class="header">

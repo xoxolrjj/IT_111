@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles_employees.css">
+  <link rel="stylesheet" href="../css/styles_employees.css">
   <title>Employee Management</title>
 </head>
 <body>
   <div class="container">
     <!-- Include the Sidebar -->
-    <?php include 'menu.html'; ?>
-
+ 
     <!-- Main Content -->
     <div class="main-content">
       <header>
