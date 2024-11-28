@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Include the Sidebar -->
     <div class="wrapper">
-         <!-- Main Content -->
         <div class="main-content">
             <div class="header">
-                <h1>Departmentssss</h1>
+                <h1>Departments</h1>
             </div>
             <div class="content-area">
                 <div class="add-department">
                     <h2>Add Department</h2>
-                    <form action="add_department.php" method="POST">
+                <form action="index.php?command=addRec" method="POST" enctype="multipart/form-data">
                         <input type="text" name="department_name" placeholder="Department Name" required>
                         <div class="form-actions">
                             <button type="submit" class="save-btn">Save</button>
@@ -34,28 +32,29 @@
                         <thead>
                             <tr>
                                 <th>Department Name</th>
-                                <th>Manager ID</th>
-                                <th>Action</th>
+                                 <th>Department ID</th>
+
+                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Ahmed Rashdan</td>
-                                <td>101</td>
-                                <td>
-                                    <button class="edit-btn">✏️</button>
-                                    <button class="delete-btn">🗑️</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Ali Alhamdan</td>
-                                <td>102</td>
-                                <td>
-                                    <button class="edit-btn">✏️</button>
-                                    <button class="delete-btn">🗑️</button>
-                                </td>
-                            </tr>
-                            <!-- Add more rows as needed -->
+                            <?php if (!empty($departments)): ?>
+                                <?php foreach ($departments as $department): ?>
+                                    <tr>
+                                        <td><?= htmlspecialchars($department->Name) ?></td>
+                                    <td><?= htmlspecialchars($department->DepartmentID) ?></td>
+
+                                         <td>
+                                            <button class="edit-btn">✏️</button>
+                                            <button class="delete-btn">🗑️</button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="3">No departments found.</td>
+                                </tr>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>
