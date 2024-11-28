@@ -34,12 +34,14 @@
                         <thead>
                             <tr>
                                 <th>Department Name</th>
+                                <th>Manager ID</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Ahmed Rashdan</td>
+                                <td>101</td>
                                 <td>
                                     <button class="edit-btn">✏️</button>
                                     <button class="delete-btn">🗑️</button>
@@ -47,6 +49,7 @@
                             </tr>
                             <tr>
                                 <td>Ali Alhamdan</td>
+                                <td>102</td>
                                 <td>
                                     <button class="edit-btn">✏️</button>
                                     <button class="delete-btn">🗑️</button>

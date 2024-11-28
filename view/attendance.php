@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance</title>
     <link rel="stylesheet" href="../css/styles_attendance.css">
-    
 </head>
 <body>
     <!-- Include the menu -->
@@ -27,39 +26,30 @@
             <table>
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Employee</th>
-                        <th>Position</th>
-                        <th>Department</th>
+                        <th>Attendance ID</th>
+                        <th>Employee ID</th>
                         <th>Date</th>
                         <th>Time-in</th>
                         <th>Time-out</th>
-                        <th>Work Hours</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>1</td>
                         <td>2341421</td>
-                        <td>Ahmed Rashdan</td>
-                        <td>Help Desk Executive</td>
-                        <td>IT Department</td>
                         <td>29 July 2023</td>
                         <td>09:00</td>
                         <td>18:00</td>
-                        <td>10h 2m</td>
-                        <td><a href="edit_attendance.php?id=2341421" class="edit-link">Edit</a></td>
+                        <td><a href="edit_attendance.php?id=1" class="edit-link">Edit</a></td>
                     </tr>
                     <tr>
+                        <td>2</td>
                         <td>3411421</td>
-                        <td>Ali Alhamdan</td>
-                        <td>Senior Executive</td>
-                        <td>Marketing</td>
                         <td>29 July 2023</td>
                         <td>00:00</td>
                         <td>00:00</td>
-                        <td>0m</td>
-                        <td><a href="edit_attendance.php?id=3411421" class="edit-link">Edit</a></td>
+                        <td><a href="edit_attendance.php?id=2" class="edit-link">Edit</a></td>
                     </tr>
                     <!-- Add more rows as needed -->
                 </tbody>

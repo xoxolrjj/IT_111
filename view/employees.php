@@ -38,26 +38,29 @@
           <table>
             <thead>
               <tr>
-                <th>ID</th>
-                <th>Employee</th>
+                <th>Employee ID</th>
+                <th>Department ID</th>
+                <th>Name</th>
                 <th>Position</th>
-                <th>Department</th>
+                <th>Hire Date</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>2341421</td>
+                <td>101</td>
                 <td>Ahmed Rashdan</td>
                 <td>Help Desk Executive</td>
-                <td>IT Department</td>
+                <td>2022-05-10</td>
                 <td><button>Edit</button></td>
               </tr>
               <tr>
                 <td>3411421</td>
+                <td>102</td>
                 <td>Ali Alhamdan</td>
                 <td>Senior Executive</td>
-                <td>Marketing</td>
+                <td>2020-09-15</td>
                 <td><button>Edit</button></td>
               </tr>
               <!-- Add more rows as needed -->

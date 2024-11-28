@@ -20,25 +20,29 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Employee</th>
-                            <th>Leave Type</th>
-                            <th>Apply Date</th>
+                            <th>Leave ID</th>
+                            <th>Employee ID</th>
                             <th>Start Date</th>
                             <th>End Date</th>
-                            <th>Duration</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>2341421</td>
-                            <td>Ahmed Rashdan</td>
-                            <td>Sick Leave</td>
                             <td>29 July 2023</td>
                             <td>29 July 2023</td>
-                            <td>29 July 2023</td>
-                            <td>10 days</td>
+                            <td>
+                                <button class="btn-approve">Approve</button>
+                                <button class="btn-reject">Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3411421</td>
+                            <td>30 July 2023</td>
+                            <td>05 August 2023</td>
                             <td>
                                 <button class="btn-approve">Approve</button>
                                 <button class="btn-reject">Reject</button>
