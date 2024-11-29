@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/styles_employees.css">
+  <link rel="stylesheet" href="css/styles_employees.css">
   <title>Employee Management</title>
 </head>
 <body>
@@ -37,6 +37,8 @@
           </div>
           <table>
             <thead>
+             
+
               <tr>
                 <th>Employee ID</th>
                 <th>Department ID</th>
@@ -47,22 +49,23 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>2341421</td>
-                <td>101</td>
-                <td>Ahmed Rashdan</td>
-                <td>Help Desk Executive</td>
-                <td>2022-05-10</td>
-                <td><button>Edit</button></td>
-              </tr>
-              <tr>
-                <td>3411421</td>
-                <td>102</td>
-                <td>Ali Alhamdan</td>
-                <td>Senior Executive</td>
-                <td>2020-09-15</td>
-                <td><button>Edit</button></td>
-              </tr>
+
+             <?php if(!empty($employees)): ?>
+                <?php foreach($employees as $employee): ?>
+                  <tr>
+            <td><?= htmlspecialchars($employee->Name) ?></td>
+           <td><?= htmlspecialchars($employee->DepartmentID) ?></td> 
+                      <td><?= htmlspecialchars($employee->EmployeeID) ?></td> 
+                      <td><?= htmlspecialchars($employee->Position) ?></td> 
+                      <td><?= htmlspecialchars($employee->HireDate) ?></td> 
+                  <td><button>Edit</button></td>
+                </tr>
+              <?php endforeach; ?>
+                            <?php else: ?>
+                                <tr>
+                                    <td colspan="3">No departments found.</td>
+                                </tr>
+                            <?php endif; ?>
               <!-- Add more rows as needed -->
             </tbody>
           </table>

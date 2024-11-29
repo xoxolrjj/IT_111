@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="../css/styles_attendance.css">
 </head>
 <body>
-    <!-- Include the menu -->
- 
-    <!-- Main content -->
+   
     <div class="main-content">
         <div class="header">
             Attendance

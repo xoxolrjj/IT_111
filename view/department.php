@@ -15,13 +15,16 @@
             <div class="content-area">
                 <div class="add-department">
                     <h2>Add Department</h2>
-                <form action="index.php?command=addRec" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="department_name" placeholder="Department Name" required>
-                        <div class="form-actions">
-                            <button type="submit" class="save-btn">Save</button>
-                            <button type="reset" class="cancel-btn">Cancel</button>
-                        </div>
-                    </form>
+            <form action="index.php?command=addRec" method="POST">
+                <input type="text" name="department_id" placeholder="Department ID" required>
+                <input type="text" name="department_name" placeholder="Department Name" required>
+                <div class="form-actions">
+                    <button type="submit" class="save-btn">Add</button>
+                    <button type="reset" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+
+
                 </div>
                 <div class="department-list">
                     <h2>Department List</h2>
@@ -45,8 +48,14 @@
                                     <td><?= htmlspecialchars($department->DepartmentID) ?></td>
 
                                          <td>
-                                            <button class="edit-btn">✏️</button>
-                                            <button class="delete-btn">🗑️</button>
+                                            <form action="index.php?command=editRec" method="POST" style="display: inline;">
+                                                <input type="hidden" name="department_id" value="<?= htmlspecialchars($department->DepartmentID) ?>">
+                                                <button type="submit" class="edit-btn">✏️</button>
+                                            </form>     
+                                          <form action="index.php?command=deleteRec" method="POST" style="display: inline;">
+        <input type="hidden" name="department_id" value="<?= htmlspecialchars($department->DepartmentID) ?>">
+        <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this department?');">🗑️</button>
+    </form>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
