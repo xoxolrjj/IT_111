@@ -1,185 +1,252 @@
-/* General Body Styling */
-body {
-    margin: 0;
-    display: flex;
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-}
+    /* General Body Styling */
+    body {
+        margin: 0;
+        display: flex;
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+    }
 
-/* Menu Bar */
-.menu-bar {
-    width: 250px;
-    background: #ffffff;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    position: fixed;
-}
+    /* Menu Bar */
+    .menu-bar {
+        width: 250px;
+        background: #ffffff;
+        border-right: 1px solid #e0e0e0;
+        padding: 20px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        height: 100vh;
+        position: fixed;
+    }
 
-.menu-bar h2 {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
+    .menu-bar h2 {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
 
-.menu-bar ul {
-    list-style: none;
-    padding: 0;
-}
+    .menu-bar ul {
+        list-style: none;
+        padding: 0;
+    }
 
-.menu-bar ul li {
-    margin-bottom: 15px;
-    color: #555;
-    cursor: pointer;
-}
+    .menu-bar ul li {
+        margin-bottom: 15px;
+        color: #555;
+        cursor: pointer;
+    }
 
-.menu-bar ul li.active {
-    font-weight: bold;
-    color: #6C63FF;
-}
+    .menu-bar ul li.active {
+        font-weight: bold;
+        color: #6C63FF;
+    }
 
-.menu-bar ul li a {
-    text-decoration: none;
-    color: inherit;
-}
+    .menu-bar ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
 
-/* Content Section */
-.main-content {
-    flex-grow: 1;
-    margin-left: 250px; /* Matches the sidebar width */
-    padding: 20px;
-    display: flex; /* Enables flexbox */
-    justify-content: center; /* Horizontally centers content */
-    align-items: center; /* Vertically centers content */
-    min-height: 100vh; /* Ensures it takes full viewport height */
-    box-sizing: border-box; /* Includes padding in width/height calculations */
-}
+    /* Content Section */
+    .main-content {
+        flex-grow: 1;
+        margin-left: 250px; /* Matches the sidebar width */
+        padding: 20px;
+        display: flex; /* Enables flexbox */
+        justify-content: center; /* Horizontally centers content */
+        align-items: center; /* Vertically centers content */
+        min-height: 100vh; /* Ensures it takes full viewport height */
+        box-sizing: border-box; /* Includes padding in width/height calculations */
+    }
 
-/* Header */
-.header {
-    background-color: #6C63FF;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
+    /* Header */
+    .header {
+        text-align: center;
+        background-color: #5e2de8; /* Matches the header color from departments */
+        color: white;
+        padding: 15px;
+        margin-left: 250px;
+    }
 
-/* Table Container */
+    /* Table Container */
 .table-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures it takes full width */
+    max-width: 800px; /* Optional: sets a maximum width */
 }
 
-/* Top Controls */
-.table-container .top-controls {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-}
+    /* Top Controls */
+    .table-container .top-controls {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
 
-.table-container .top-controls .btn-primary {
-    background-color: #6C63FF;
-    color: white;
-    padding: 10px 15px;
+    .table-container .top-controls .btn-primary {
+        background-color: #6C63FF;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .table-container .top-controls .btn-primary:hover {
+        background-color: #5a55d6;
+    }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Status Styling */
+    .status-approved {
+        color: green;
+        font-weight: bold;
+    }
+
+    .status-pending {
+        color: #ffc107;
+        font-weight: bold;
+    }
+
+    .status-rejected {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* Edit Link */
+    .edit-link {
+        text-decoration: none;
+        color: #6C63FF;
+        font-weight: bold;
+    }
+
+    .edit-link:hover {
+        text-decoration: underline;
+    }
+
+   /* Button Styles */
+.edit-btn, .delete-btn {
+    padding: 8px 12px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    color: white; /* Text color for buttons */
+    margin-right: 5px; /* Space between buttons */
 }
 
-.table-container .top-controls .btn-primary:hover {
-    background-color: #5a55d6;
+.edit-btn {
+    background-color: #6C63FF; /* Color for edit button */
 }
 
-/* Table Styles */
-table {
-    width: 100%;
-    border-collapse: collapse;
+.delete-btn {
+    background-color: #dc3545; /* Color for delete button */
 }
 
-table th, table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    text-align: left;
+.edit-btn:hover {
+    background-color: #5a55d6; /* Darker shade on hover for edit */
 }
 
-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
+.delete-btn:hover {
+    background-color: #c82333; /* Darker shade on hover for delete */
 }
 
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+/* Table Container Adjustments */
+.table-container td {
+    text-align: center; /* Center aligns table content */
 }
 
-table tr:hover {
-    background-color: #f1f1f1;
-}
 
-/* Status Styling */
-.status-approved {
-    color: green;
-    font-weight: bold;
-}
-
-.status-pending {
-    color: #ffc107;
-    font-weight: bold;
-}
-
-.status-rejected {
-    color: red;
-    font-weight: bold;
-}
-
-/* Edit Link */
-.edit-link {
-    text-decoration: none;
-    color: #6C63FF;
-    font-weight: bold;
-}
-
-.edit-link:hover {
-    text-decoration: underline;
-}
-
-/* Approve/Reject Buttons */
-.btn-approve, .btn-reject {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 13px;
-    color: #fff;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.btn-approve {
-    background-color: #28a745;
-}
-
-.btn-reject {
-    background-color: #dc3545;
-}
-
-.btn-approve:hover {
-    background-color: #218838;
-}
-
-.btn-reject:hover {
-    background-color: #c82333;
-}
-
-/* Responsive Table Adjustments */
-@media screen and (max-width: 768px) {
-    table th, table td {
-        font-size: 12px; /* Slightly smaller font for smaller screens */
-        padding: 10px;
+    /* Responsive Table Adjustments */
+    @media screen and (max-width: 768px) {
+        table th, table td {
+            font-size: 12px; /* Slightly smaller font for smaller screens */
+            padding: 10px;
+        }
     }
+
+    /* Add Payroll Card */
+.add-payroll {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Adds space below the add payroll card */
+    width: 100%; /* Ensures it takes full width */
+    max-width: 800px; /* Optional: sets a maximum width */
 }
+
+    .add-payroll h2 {
+        margin-bottom: 15px;
+    }
+
+    .add-payroll form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .add-payroll input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .save-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .save-btn:hover {
+        background-color: #45a049;
+    }
+
+    .cancel-btn {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .cancel-btn:hover {
+        background-color: #e53935;
+    }
+

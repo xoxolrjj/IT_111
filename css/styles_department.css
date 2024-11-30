@@ -5,52 +5,54 @@
     padding: 20px;
     display: flex;
     flex-direction: column; /* Stacks child elements vertically */
-    gap: 20px; /* Adds spacing between sections */
+    gap: 20px; /* Adds spacing between the sections */
     align-items: stretch; /* Ensures sections span the full width */
     min-height: 100vh; /* Ensures full viewport height */
     box-sizing: border-box; /* Includes padding in width/height calculations */
 }
+
+
 
 .header {
     text-align: center;
     background-color: #5e2de8;
     color: white;
     padding: 15px;
-    margin-left: 250px; /* Matches sidebar width */
+    margin-left: 250px;
 }
 
-/* Add Attendance Styles */
-.add-attendance {
+
+
+.add-department, .department-list {
     flex: 1;
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensures content is readable on smaller screens */
 }
 
-.add-attendance h2 {
+.add-department h2, .department-list h2 {
     margin-bottom: 15px;
 }
 
-.add-attendance form {
+.add-department form {
     display: flex;
     flex-direction: column;
 }
 
-.add-attendance input {
+.add-department input {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-/* Form Actions */
 .form-actions {
     display: flex;
     gap: 10px;
 }
 
-/* Buttons */
 .save-btn {
     background-color: #4caf50;
     color: white;
@@ -79,51 +81,21 @@
     background-color: #e53935;
 }
 
-/* Attendance Table Styles */
-.attendance-table {
-    flex: 1;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.department-list .search-bar {
+    margin-bottom: 10px;
 }
 
-.top-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Center align the controls */
-    margin-bottom: 20px;
-}
-
-.top-controls input {
+.department-list .search-bar input {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
-    flex: 1; /* Makes the input take up available space */
-    margin-right: 10px; /* Adds spacing between input and buttons */
 }
 
-.top-controls button {
-    background-color: #5e2de8; /* Matches the header color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
-}
-
-.top-controls button:hover {
-    background-color: #4b21b8; /* Darker shade for hover effect */
-}
-
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px; /* Add some space above the table */
+    margin-top: 10px;
 }
 
 table th, table td {
@@ -135,14 +107,6 @@ table th, table td {
 table th {
     background-color: #5e2de8;
     color: white;
-}
-
-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-table tr:hover {
-    background-color: #f1f1f1;
 }
 
 .edit-btn, .delete-btn {

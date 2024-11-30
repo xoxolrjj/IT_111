@@ -61,5 +61,24 @@ class EmployeeModel
 //     $result = $stmt->get_result();
 //     return $result->fetch_object();
 // }
+
+ // Method to get employee details by ID
+ public function getEmployeeById($employeeID)
+ {
+     $stmt = $this->db->prepare("SELECT * FROM employee WHERE EmployeeID = ?");
+     $stmt->bind_param('i', $employeeID); // 'i' for integer (EmployeeID)
+     $stmt->execute();
+     $result = $stmt->get_result();
+     return $result->fetch_assoc(); // Fetch as an associative array
+ }
+
+ // Method to update employee details
+ public function updateEmployee($employeeID, $departmentID, $name, $position, $hireDate)
+ {
+     $stmt = $this->db->prepare("UPDATE employee SET DepartmentID = ?, Name = ?, Position = ?, HireDate = ? WHERE EmployeeID = ?");
+     $stmt->bind_param('isssi', $departmentID, $name, $position, $hireDate, $employeeID); // Bind parameters
+     return $stmt->execute(); // Execute the statement
+ }
+
 }
 ?>

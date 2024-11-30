@@ -50,6 +50,30 @@ class Controller
             }
             header("Location: index.php?command=0");
             exit();
+            
+
+        case 'editEmp': // New case for editing employees
+            $employeeID = $_GET['employee_id'] ?? null;
+            if ($employeeID) {
+                // Fetch the employee details using the employee model
+                $employee = $this->employeeModel->getEmployeeById($employeeID);
+                include_once('view/edit_employees.php'); // Load the edit employee view
+            }
+            break;
+
+        case 'saveEmp': // Save updates to an employee
+            $employeeID = $_POST['employee_id'] ?? null;
+            $departmentID = $_POST['department_id'] ?? null;
+            $name = $_POST['name'] ?? null;
+            $position = $_POST['position'] ?? null;
+            $hireDate = $_POST['hire_date'] ?? null;
+
+            if ($employeeID && $departmentID && $name && $position && $hireDate) {
+                // Update the employee details in the database
+                $this->employeeModel->updateEmployee($employeeID, $departmentID, $name, $position, $hireDate);
+            }
+            header("Location: index.php?command=1"); // Redirect back to the employee list
+            exit();
                 
               
                
